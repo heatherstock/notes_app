@@ -5,7 +5,12 @@
   }
 
   List.prototype.addNote = function(newNote) {
-    this.notes.push(newNote);
+    var note = new Note(newNote)
+    this.notes.push(note);
+  }
+
+  List.prototype.getNotes = function() {
+    return this.notes;
   }
 
   exports.List = List;
