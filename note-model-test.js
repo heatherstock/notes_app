@@ -1,21 +1,13 @@
-(function(exports) {
-    function takesNoteOnInstantiation() {
-        var note = new Note("New note");
-        
-        if (note.text !== "New note") {
-            throw new Error("New note not stored");
-        }
-    };
-    takesNoteOnInstantiation();
-})(this);
+function takesNoteOnInstantiation() {
+    var note = new Note("New note");
+    assert.isTrue(note.text === "New note");
+};
+takesNoteOnInstantiation();
 
-(function(exports) {
-    function returnsNotes() {
-        var note = new Note("New note");
 
-        if (note.returnNotes() !== "New note") {
-            throw new Error("New note not returned");
-        }
-    };
-    returnsNotes();
-})(this);
+
+function returnsNotes() {
+    var note = new Note("New note");
+    assert.isTrue(note.returnNotes() === "New note");
+};
+returnsNotes();
