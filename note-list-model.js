@@ -2,7 +2,11 @@
 
   function List(){
     this.notes = [];
-  };
-  exports.List = List;
+  }
 
+  List.prototype.addNote = function(newNote) {
+    this.notes.push(newNote);
+  }
+
+  exports.List = List;
 })(this);

@@ -18,12 +18,8 @@ hasEmptyArray();
 
 function storesListinArray(){
   var list = new List();
-  var note = new Note("new note");
-
-  for ( var i = 0; i< list.notes.length; i++){
-    test.isTrue(list.notes[i]=== "new note");
-    }
-
+  list.addNote("New note")
+  
+  test.isTrue(list.notes.includes("New note"));
 };
-
 storesListinArray();
