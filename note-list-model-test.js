@@ -1,4 +1,6 @@
 var list = new List();
+var testList = new List();
+var testNote = new Note('New note');
 
 function hasEmptyArray(){
     test.isTrue(list.notes.length === 0);
@@ -12,8 +14,8 @@ function hasEmptyArray(){
  storesListinArray();
 
  function displaysList() {
-    list.addNote("New note");
-    test.arraysEqual(list.getNotes().text, ["New note"])
+    testList.notes.push(testNote);
+    test.arraysEqual(testList.getNotes(), [testNote]);
  }
  displaysList();
  
