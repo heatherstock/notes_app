@@ -1,6 +1,6 @@
 function takesNoteOnInstantiation() {
     var note = new Note("New note");
-    assert.isTrue(note.text === "New note");
+    test.isTrue(note.text === "New note");
 };
 takesNoteOnInstantiation();
 
@@ -8,6 +8,6 @@ takesNoteOnInstantiation();
 
 function returnsNotes() {
     var note = new Note("New note");
-    assert.isTrue(note.returnNotes() === "New note");
+    test.isTrue(note.returnNotes() === "New note");
 };
 returnsNotes();
